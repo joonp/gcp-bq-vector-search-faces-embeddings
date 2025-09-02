@@ -8,6 +8,10 @@
 4. **임베딩 모델**을 통한 얼굴 이미지에 대한 벡터화
 5. **VECTOR_SEARCH** 펑션을 통하여 벡터값 검색(코사인 거리 비교)을 통하여 유사한 얼굴 이미지 찾기
 
+
+    <img width="950" alt="Screenshot 2024-07-28 at 4 21 13 PM" src="https://github.com/user-attachments/assets/5a43cb8d-db5e-4277-8ad3-af0fd3e7c21b">
+
+
 ## 1단계: 얼굴 이미지 저장용 버킷 생성 및 샘플 이미지 복사
 
 1. 유사도 검색대상 얼굴 이미지 저장용 오브젝트 스토리지 버킷 생성
@@ -128,6 +132,7 @@
     (
     SELECT * FROM `face_search.test_face_embeddings`
     ),
+    ## tok_k 값을 통하여 상위 몇개의 값을 결과로 출력할지 정의
     top_k => 5,
     distance_type => 'COSINE',
     options => '{"use_brute_force":true}'
