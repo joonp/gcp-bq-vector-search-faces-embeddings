@@ -14,8 +14,9 @@
 
 ## 1단계: 얼굴 이미지 저장용 버킷 생성 및 샘플 이미지 복사
 
-1. 유사도 검색대상 얼굴 이미지 저장용 오브젝트 스토리지 버킷 생성
+1. 얼굴 이미지 저장용 오브젝트 스토리지 버킷 생성
     ```sh
+    ## Cloud Shell 에서 실행을 추천 드립니다. 
     gsutil mb -l asia-northeast3 gs://[your-bucket-name]
     ```   
 
@@ -24,7 +25,7 @@
     unzip sample_faces.zip
     gsutil cp -r sample_faces gs://[your-bucket-name]
     ```   
-      <img width="950" alt="Screenshot 2024-07-28 at 4 21 13 PM" src="https://github.com/user-attachments/assets/1cc9340a-0d3f-46ee-bb43-443462fbef8d">
+      <img width="950" alt="Screenshot 2024-07-28 at 4 21 13 PM" src="https://github.com/user-attachments/assets/1cc9340a-0d3f-46ee-bb43-443462fbef8d">    
    
 
 ## 2단계: 빅쿼리 데이터셋 생성 및 임베딩 모델 커넥션 생성
@@ -34,7 +35,7 @@
     bq mk --location=asia-northeast3 [your-dataset-name]]
     ```   
 
-2. 임베딩 모델 커넥션 생성 
+2. 임베딩 모델 커넥션 생성   
     (1) 빅쿼리 스튜디오에서 **+Add data**, **verte** 검색, **Vertex AI** 선택, **BigQuery Federation** 선택
     <img width="950" alt="Screenshot 2024-07-28 at 4 35 07 PM" src="https://github.com/user-attachments/assets/ed5863ca-6854-4988-97f7-cdb9fbd8edbf">
 
