@@ -2,7 +2,7 @@
 
 해당 데모의 목적은 빅쿼리를 통하여 오브젝트 스토리지에 저장된 얼굴 이미지에 대하여 [**Multi Modal Embedding Model**](https://cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings) 을 통하여 벡터화하여, 빅쿼리에서 제공하는 [**VECTOR_SEARCH**](https://cloud.google.com/bigquery/docs/vector-search) 펑션을 사용하여 찾으려는 소스 얼굴 이미지와 검색 대상 얼굴 이미지에 대한 유사도분석(정확히는 cosine distance 비교)을 통하여 가장 유사한 인물 이미지를 검색하여 주는 시나리오입니다.     
 
-**VECTOR_SEARCH** 펑션을 사용하여 해당 데모에서는 얼굴(이미지)에 대한 유사도 검색에 사용하였으나, 이미지와 텍스트에 대하여 벡타화하여 검색, 분류, 추천 등에도 적용이 가능합니다. 해당 데모는 아래와 같이 5단계로 이루어집니다. 
+**VECTOR_SEARCH** 펑션을 사용하여 해당 데모에서는 얼굴(이미지)에 대한 유사도 검색에 사용하였으나, 이미지와 텍스트에 대하여 벡타화하여 검색, 분류, 추천 등에도 적용이 가능합니다. 해당 데모는 아래 단계로 이루어집니다. 
 
 1. 얼굴 이미지 저장용 **오브젝트 스토리지 버킷 생성** 및 **샘플 이미지 복사** 
 2. 빅쿼리 **데이터셋 생성** 및 **임베딩 모델 커넥션 생성**
@@ -39,7 +39,7 @@
     ```   
 
 2. 임베딩 모델 커넥션 생성   
-    (1) 빅쿼리 스튜디오에서 **+Add data**, **verte** 검색, **Vertex AI** 선택, **BigQuery Federation** 선택
+    (1) 빅쿼리 스튜디오에서 **+Add data**, **vertex** 검색, **Vertex AI** 선택, **BigQuery Federation** 선택
     <img width="950" alt="Screenshot 2024-07-28 at 4 35 07 PM" src="https://github.com/user-attachments/assets/ed5863ca-6854-4988-97f7-cdb9fbd8edbf">
 
     <img width="950" alt="Screenshot 2024-07-28 at 4 35 07 PM" src="https://github.com/user-attachments/assets/06a1325b-6b37-48bc-9356-800ec61d285c">
