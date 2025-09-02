@@ -1,0 +1,1 @@
+# gcp-bq-vector-search-faces-embeddings
